@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1 задание
+        let massiv1 = ['js', 'css', 'html'];
+        console.log(massiv1[0]);
+
+        //2 задание
+        var array = [0, 1, false, 2, undefined, '', 3, null] 
+        var filtered = array.filter(function (el) {
+            return el != null && el > 0;
+        });
+
+        console.log(filtered);
+
+        //3 задание
+       let massiv3= [[1,2], [1,2,3], [1,2,3,4]];
+
+
+       var filtered = massiv3.filter(function (length) {
+            return length > massiv3.length > 3;
+        });
+console.log(massiv3);
+ 
+
+    </script>
+</body>
+
+</html>
