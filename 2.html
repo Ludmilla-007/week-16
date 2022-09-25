@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <h1>Расчет стоимости автомобиля</h1>
+  <div class="instractions">Пожалуйста, выберете все параметры</div>
+  <div class="container">
+    <!--Марка-->
+    <div class="brandtype">
+      <label for="" class="title">Марка</label>
+      <select class="brand_name" name="" id="name" onchange="addName()">
+        <option value="choose" id="choice" selected>Выбрать марку</option>
+        <option id="Honda" value="300">Honda</option>
+        <option id="Audi" value="800">Audi</option>
+        <option id="Isuzu" value="100">Isuzu</option>
+        <option id="VW" value="400">VW</option>
+        <option id="BMW" value="300">BMW</option>
+        <option id="Toyota" value="500">Toyota</option>
+        <option id="KIA" value="200">KIA</option>
+      </select>
+      <div class="errors" id="errorMessage"></div>
+    </div>
+    <!--топливо-->
+    <div class="power">
+      <label for="" class="title" id="fuelTitle"> Вид топлива</label>
+      <!--бензин-->
+      <input type="radio" value="300" name="fuel" id="gas" onclick="addFuel()">
+      <label for="gas">бензин</label>
+      <!--дизель-->
+      <input type="radio" value="100" name="fuel" id="diesel" onclick="addFuel()">
+      <label for="diesel">дизель</label>
+      <!--электрический-->
+      <input type="radio" value="500" name="fuel" id="electric" onclick="addFuel()">
+      <label for="electric">электричество</label>
+    </div>
+    <div class="errors" id="errorFuel"></div>
+
+
+    <!--двигатель-->
+    <div class="transmissionType">
+      <label for="transmission" class="title"> Коробка передач</label>
+
+      <input type="radio" value="300" name="transmission" id="manuel" onclick="addTransmission()">
+      <label for="manuel">механика</label>
+
+      <input type="radio" value="100" name="transmission" id="automatic" onclick="addTransmission()">
+      <label for="automatic">автомат</label>
+    </div>
+    <div class="errors" id="errorTransmission"></div>
+
+
+    <!--Возраст автомобиля-->
+    <div class="carAge">
+      <label for="" class="title"> Возраст автомобиля</label>
+
+      <input type="radio" value="300" name="carAge" id="less than 3" onclick="addAges()">
+      <label for="less than 3">меньше трех лет</label>
+
+      <input type="radio" value="100" name="carAge" id="from 3 to 5" onclick="addAges()">
+      <label for="from 3 to 5">От 3 до 5 лет</label>
+
+      <input type="radio" value="500" name="carAge" id="from 5" onclick="addAges()">
+      <label for="from 5">От 5 лет</label>
+    </div>
+    <div class="errors" id="errorAge"></div>
+
+    <!--Комплектация-->
+    <div class="equipment">
+      <label for="equipment" class="title"> Комплектация</label>
+
+      <input type="radio" value="100" name="equipment" id="base" onclick="addEquipments()">
+      <label for="base">Базовая</label>
+
+      <input type="radio" value="300" name="equipment" id="middle" onclick="addEquipments()">
+      <label for="middle">Средняя</label>
+
+      <input type="radio" value="500" name="equipment" id="full" onclick="addEquipments()">
+      <label for="full">Полная</label>
+    </div>
+    <div class="errors" id="errorEquipment"></div>
+
+    <!--Получатель-->
+    <div class="payee">
+      <label for="payee" class="title"> Комплектация</label>
+
+      <input type="radio" value="100" name="payee" id="law" onclick="addPayee()">
+      <label for="law">Юридический</label>
+
+      <input type="radio" value="300" name="payee" id="physical" onclick="addPayee()">
+      <label for="physical">Физический</label>
+
+    </div>
+    <div class="errors" id="errorPayee"></div>
+  </div>
+  <button onclick="result()">Рассчитать</button>
+  <div class="result" id="total"></div>
+  <script src="2.js"></script>
+</body>
+
+</html>

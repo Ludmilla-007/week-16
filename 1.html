@@ -7,34 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <input type = "text" name="add" class = "text-input" id = "text-input" >
-   <button class = "add" id = "add" name="addb">Добавить</button>
-   <div class = "text-area" id = "text-area"></div>  
-   <button class = "btn" id = "sortname">Готово</button>
+    <input class="num" type="text" value="" placeholder="число">
+<input class="num" type="text" value="" placeholder="число">
+<input class="num" type="text" value="" placeholder="число">
+<button id="task">жми</button>
+<p id="result"></p>   
     <script>
-       var firstArr = [];
-	
-    var addclick = function(eventclick){
-    var secondarr = [];
-    var textinp = document.getElementById("text-input").value;
-    
-    var res = firstArr.push(textinp);
-    document.getElementById('text-area').innerHTML += textinp + '<br>';
-    }
-    
-    var sortname  = function(sort){
-        var textinp = document.getElementById("text-input").value;
-    
-        var sortn = firstArr.sort();
-        console.log(sortn);
-        document.getElementById('text-area').innerHTML += sortn + '<br>';
-    }
-    
-    var clickbtn = document.getElementById('add');
-    clickbtn.addEventListener('click', addclick, false);
-    
-    var clicksort = document.getElementById('sortname');
-    clicksort.addEventListener('click', sortname, false);
+    var elem = document.getElementById('task');
+elem.addEventListener('click', func);
+var elem1 = document.getElementsByClassName('num');
+
+function func() {
+	var sum = 0;
+	for (var i = 0; i < elem1.length; i++) {
+		sum += +elem1[i].value;
+	}
+	var newElem = document.getElementById('result');
+	newElem.innerHTML = sum;
+    sort.func();
+}   
     </script>
 </body>
 </html>
