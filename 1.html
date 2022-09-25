@@ -7,25 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <input class="num" type="text" value="" placeholder="число">
-<input class="num" type="text" value="" placeholder="число">
-<input class="num" type="text" value="" placeholder="число">
-<button id="task">жми</button>
-<p id="result"></p>   
-    <script>
-    var elem = document.getElementById('task');
-elem.addEventListener('click', func);
-var elem1 = document.getElementsByClassName('num');
+  <div class="content" style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <input id="numb" style="margin-right: 25px;"> <br>
+    <button type="button" onclick="myFunction()">Вызвать функцию</button> <br>
+    <p id="demo"></p>
+</div>
 
-function func() {
-	var sum = 0;
-	for (var i = 0; i < elem1.length; i++) {
-		sum += +elem1[i].value;
-	}
-	var newElem = document.getElementById('result');
-	newElem.innerHTML = sum;
-    sort.func();
-}   
-    </script>
+<script>
+    var sum;
+    var arrayElement = [];
+
+    function myFunction() {
+        var text = document.getElementById("numb").value;
+        arrayElement = text.split(',');
+        sum = arrayElement.reduce(myFunction2, 0);
+        alert("Сумма: " + sum);
+        
+    }
+
+    function myFunction2(total, value) {
+        return total + +value;
+    }
+
+</script>
 </body>
 </html>
